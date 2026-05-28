@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TechLynk AI Trading</title>
+  <title>Game Changer FX</title>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -529,6 +529,32 @@
     </div>
 
   </footer>
+
+<script src="app.js"></script>
+
+<script>
+// CONNECT LANDING PAGE BUTTONS TO PRODUCT PAGE
+
+document.querySelectorAll("button").forEach(btn => {
+
+  if(btn.innerText.includes("Buy Robot")){
+    btn.addEventListener("click", () => {
+      window.location.href = "product.html";
+    });
+  }
+
+  if(btn.innerText.includes("Get Started")){
+    btn.addEventListener("click", () => {
+      window.location.href = "product.html";
+    });
+  }
+
+});
+
+// UPDATE CART COUNT ON LOAD
+updateCartCount();
+</script>
+<script src="app.js"></script>
 
 </body>
 </html>

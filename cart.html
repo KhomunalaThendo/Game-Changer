@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#050816] text-white">
+
+<nav class="p-5 border-b border-gray-800">
+  <a href="index.html">Home</a>
+</nav>
+
+<section class="p-10">
+
+  <h1 class="text-3xl font-bold mb-6">Your Cart</h1>
+
+  <div id="cartList"></div>
+
+  <h2 class="text-2xl mt-6">
+    Total: <span id="total">$0</span>
+  </h2>
+
+  <a href="checkout.html"
+     class="inline-block mt-6 bg-blue-500 px-6 py-3 rounded-xl">
+    Checkout
+  </a>
+
+</section>
+
+<script src="app.js"></script>
+
+<script>
+function renderCart(){
+
+  const list = document.getElementById("cartList");
+
+  let total = 0;
+
+  list.innerHTML = "";
+
+  cart.forEach((item, i) => {
+
+    total += item.price * item.quantity;
+
+    list.innerHTML += `
+      <div class="border-b border-gray-700 p-4 flex justify-between">
+
+        <div>
+          <h3>${item.name}</h3>
+          <p class="text-gray-400">${item.license}</p>
+          <p>$${item.price} x ${item.quantity}</p>
+        </div>
+
+        <button onclick="removeItem(${i}); renderCart();"
+          class="text-red-400">
+          Remove
+        </button>
+
+      </div>
+    `;
+  });
+
+  document.getElementById("total").innerText = "$" + total;
+}
+
+renderCart();
+</script>
+
+</body>
+</html>

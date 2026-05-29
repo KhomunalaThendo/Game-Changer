@@ -22,12 +22,12 @@
 <section class="grid md:grid-cols-2 gap-10 p-10">
 
   <img id="mainImg"
-    src="https://images.unsplash.com/photo-1642104704074-907c0698cbd9"
+    src="/src/game changer.png"
     class="rounded-2xl"/>
 
   <div>
 
-    <h1 class="text-4xl font-bold">NASDAQ Sniper AI</h1>
+    <h1 class="text-4xl font-bold">Game Changer AI</h1>
 
     <p class="text-gray-400 mt-2">
       High-performance MT5 trading robot
@@ -36,9 +36,8 @@
     <select id="license"
       class="bg-gray-800 p-3 mt-6 rounded-xl w-full">
 
-      <option value="199">Basic - $199</option>
-      <option value="349">Pro - $349</option>
-      <option value="599">Elite - $599</option>
+      <option value="1 000">Mobile - R1 000</option>
+      <option value="2 000">PC - R2 000</option>
 
     </select>
 
@@ -59,7 +58,7 @@
 document.getElementById("addBtn").onclick = () => {
 
   const product = {
-    name: "NASDAQ Sniper AI",
+    name: "Game Changer AI",
     price: parseInt(document.getElementById("license").value),
     quantity: 1,
     license: document.getElementById("license").selectedOptions[0].text,
@@ -68,7 +67,7 @@ document.getElementById("addBtn").onclick = () => {
 
   addToCart(product);
 
-  alert("Added to cart!");
+  console.log("Added to cart!");
 };
 </script>
 
